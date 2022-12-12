@@ -1,13 +1,32 @@
 Comandos Unix
-COMANDOS BASICOS
-    tree                            muestra todas las carpetas como un arbol
-        -L #                          profundisa en (#) de niveles
+QUE ES UN COMANDOS
+    - Un programa ejecutable
+    - Un comando de utilidad de la shell
+    - Una funcion de shell
+    - Un alias
 
-    ls                              lista los ficheros y los directorios
-        -l                          lista los ficheros y los directorios de forma detallada
-        -lh                         lista los ficheros y los directorios cambia la forma de la memoria 
+    type nombre de comando          Muestra que tipo de comando es
+
+    alias l="ls -lh"                Crea un alias para un comando son temporales
+
+    help comando                    Muestra la ayuda de un comando 
+
+    man comando                     muestra el manual del comando 
+    
+    info comando                    muestra una ayuda mas reducida
+
+    whatis                          muestra una describcion corta de un comando
+
+COMANDOS BASICOS
+    tree                            Muestra todas las carpetas como un arbol
+        -L #                        Profundisa en (#) de niveles
+
+    ls                              Lista los ficheros y los directorios
+        -l                          Lista los ficheros y los directorios de forma detallada
+        -lh                         Lista los ficheros y los directorios cambia la forma de la memoria 
         -la                         Muestra todos los archivos ocultos
-        -lS                         ordena los documentos por tamaño
+        -lS                         Ordena los documentos por tamaño
+        -d                          Busca solamente carpetas
 
     cd NombreDirectorio             Mueve entre directorios
         cd                          Si esta solo nos lleva al home
@@ -24,9 +43,9 @@ MANIPULACION DE ARCHIVOS Y DIRECTORIOS
 
     touch NombreArchivo             Crea archivos
 
-    cp NombreArchivo                copia el archivo
+    cp NombreArchivo                Copia el archivo
 
-    mv NombreArchivo path           mueve archivo o carpetas
+    mv NombreArchivo path           Mueve archivo o carpetas
     mv NombreArchivo NuevoArchivo   cambia el nombre del archivo o directorios
 
     rm NombreArchivo                Borra archivos 
@@ -34,7 +53,51 @@ MANIPULACION DE ARCHIVOS Y DIRECTORIOS
         -r                          Borra directorios
         -f                          Borra de forma forzada
 
+EXPLORAR EL CONTENIDO DE ARCHIVOS
 
+    head NombreArchivo              Muestra las primeras 10 lineas
+        -n #                        Muestra # lineas   
 
+    tail NombreArchivo              Muestra las ultilas 10 lineas   
+        -n #                        Muestra # lineas
 
+    less NombreArchivo              Muestra todo el archivo de texto
 
+    xdg-open NombreArchivo          Abrir desde la aplicacion de txto predeterminada
+    
+    nautilus NombreDirectorio       Abre el directorio
+
+Wildcards
+    son serie de caracteres speciales 
+
+    ls *.txt                        Muestra todos los archivos que terminen en txt 
+    ls datos*                       Muestra todos los archivos que empiecen con datos
+
+    ls datos?                       Muestra todos los archivos que empiecen con datos y que tengan un caracter adicional 
+
+    ls [[:upper:]]                  busca archivos que comienzan con mayuscula
+    ls [[:upper:]]*                 busca archivos que comienzan con mayuscula y que continue con cualquier otra
+
+    ls [[:lower:]]                  busca archivos que comienzan con minuscula
+
+    ls [ad]                         busca todos los archivos que empiecen con a y d, que tengan cualquier otro carater
+
+    ls [caracteres]                 Coincide con cualquier carácter que sea miembro del conjunto caracteres
+
+    ls [!caracteres]                Coincide con cualquier carácter que no sea miembro del conjunto caracteres
+
+    ls [[:clase:]]                  Coincide con cualquier carácter de la clase
+
+    ls [:alnum:]                    Coincide con cualquier carácter alfanumérico
+
+    ls [:alpha:]                    Coincide con cualquier carácter alfabético
+
+    ls [:digit:]                    Coincide con cualquier número
+
+REDIRECCIONES
+    NombreArchivo > NombreDirectorio   redirecciona el archivo a una nueva carpetas
+    NombreArchivo >> NombreDirectorio  redirecciona el archivo a una carpeta o archivo que ya fue creado 
+     
+    ls asdasdd >> output.txt 2>&1      redirecciona a output.txt y despues lo redirige a un estanddar output
+
+    
