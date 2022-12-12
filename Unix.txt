@@ -1,0 +1,40 @@
+Comandos Unix
+COMANDOS BASICOS
+    tree                            muestra todas las carpetas como un arbol
+        -L #                          profundisa en (#) de niveles
+
+    ls                              lista los ficheros y los directorios
+        -l                          lista los ficheros y los directorios de forma detallada
+        -lh                         lista los ficheros y los directorios cambia la forma de la memoria 
+        -la                         Muestra todos los archivos ocultos
+        -lS                         ordena los documentos por tamaño
+
+    cd NombreDirectorio             Mueve entre directorios
+        cd                          Si esta solo nos lleva al home
+
+    clear o ctrl+l                  Limpia la pantalla
+
+    pwd                             Muestra la ruta de donde estamos 
+
+    file                            Describe ficheros
+
+MANIPULACION DE ARCHIVOS Y DIRECTORIOS 
+
+    mkdir NombreDirectorio          crea directorios
+
+    touch NombreArchivo             Crea archivos
+
+    cp NombreArchivo                copia el archivo
+
+    mv NombreArchivo path           mueve archivo o carpetas
+    mv NombreArchivo NuevoArchivo   cambia el nombre del archivo o directorios
+
+    rm NombreArchivo                Borra archivos 
+        -i                          Borra archivos de form segura y/N
+        -r                          Borra directorios
+        -f                          Borra de forma forzada
+
+
+
+
+
