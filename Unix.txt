@@ -99,5 +99,3 @@ REDIRECCIONES
     NombreArchivo >> NombreDirectorio  redirecciona el archivo a una carpeta o archivo que ya fue creado 
      
     ls asdasdd >> output.txt 2>&1      redirecciona a output.txt y despues lo redirige a un estanddar output
-
-    
