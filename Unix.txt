@@ -17,6 +17,11 @@ QUE ES UN COMANDOS
 
     whatis                          muestra una describcion corta de un comando
 
+Como instalar Comandos
+    sudo atp install Nommbre comando 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 COMANDOS BASICOS
     tree                            Muestra todas las carpetas como un arbol
         -L #                        Profundisa en (#) de niveles
@@ -37,8 +42,9 @@ COMANDOS BASICOS
 
     file                            Describe ficheros
 
-MANIPULACION DE ARCHIVOS Y DIRECTORIOS 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
+MANIPULACION DE ARCHIVOS Y DIRECTORIOS 
     mkdir NombreDirectorio          crea directorios
 
     touch NombreArchivo             Crea archivos
@@ -53,8 +59,9 @@ MANIPULACION DE ARCHIVOS Y DIRECTORIOS
         -r                          Borra directorios
         -f                          Borra de forma forzada
 
-EXPLORAR EL CONTENIDO DE ARCHIVOS
+/////////////////////////////////////////////////////////////////////////////////////////////////
 
+EXPLORAR EL CONTENIDO DE ARCHIVOS
     head NombreArchivo              Muestra las primeras 10 lineas
         -n #                        Muestra # lineas   
 
@@ -67,8 +74,10 @@ EXPLORAR EL CONTENIDO DE ARCHIVOS
     
     nautilus NombreDirectorio       Abre el directorio
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 Wildcards
-    son serie de caracteres speciales 
+    Son serie de caracteres speciales 
 
     ls *.txt                        Muestra todos los archivos que terminen en txt 
     ls datos*                       Muestra todos los archivos que empiecen con datos
@@ -94,8 +103,35 @@ Wildcards
 
     ls [:digit:]                    Coincide con cualquier número
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 REDIRECCIONES
-    NombreArchivo > NombreDirectorio   redirecciona el archivo a una nueva carpetas
-    NombreArchivo >> NombreDirectorio  redirecciona el archivo a una carpeta o archivo que ya fue creado 
+    NombreArchivo > NombreDirectorio   Redirecciona el archivo a una nueva carpetas
+    NombreArchivo >> NombreDirectorio  Redirecciona el archivo a una carpeta o archivo que ya fue creado 
      
-    ls asdasdd >> output.txt 2>&1      redirecciona a output.txt y despues lo redirige a un estanddar output
+    ls asdasdd >> output.txt 2>&1      Redirecciona a output.txt y despues lo redirige a un estanddar output
+
+    cat NombreArchivo NuevoArchivo     Concatena (une) 2 archivos 
+
+    cat< NombreArchivo                 Redirecciona a estandar input
+
+Pipe operator
+    ls -lh | less                       Nos deja ver la lista como si estamos en un archivo
+    ls -lh | tee | less                 Nos deja generar la lista como si estamos en un archivo
+    ls -lh NombreDirectorio | sort 
+    |tee NombreArchivo | less           Oredena el acrchivo con el comando sort
+
+    cowsay "texto"                      Sale una vaca diciendo el texto
+
+    echo "hola" | lolcat                Cambia de color el texto
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Operadores de control
+    ls; cal; date                       Con el ; se ejecutan comandos de forma sincronica
+
+    ls & cal & date                     Con el & se ejecutan los comandos de formadinconica abreiendo mas terminales     
+
+    mkdir test && cd test               && actua como un condicional de comandos (si es correcta el primer comando pasa al siguiente)
+
+    mkdir test || cd test               || actua como un condicional Or
