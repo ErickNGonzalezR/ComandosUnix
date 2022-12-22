@@ -204,5 +204,38 @@ Utilidades de red
 
  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
- Comprimiendo archivos
-       
+Comprimiendo archivos
+    tar -cvf NombreArchivo.tar nombreCarpeta    Comprime archivos 
+    tar -cvzf NombreArchivo.gz nombreCarpeta    Comprime acrchivo
+
+    tar -xzvf NombreArchivo.gz                  Descomprime archivos 
+
+    zip -r NombreArchivo.zip NombreDirectorio   comprime archivos
+    unzip NombreArchivo.zip                     Descomprime archivos
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Manejo de Procesos
+    ps                                          mustra los procesos que estan corriendo
+
+    kill idProceso                              Mata los procesos con el idProces
+
+    top                                         muestra los procesos que setan usando mas procesos de la computadora
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Editores de texto en el terminal
+    vi 
+    vim
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Personalizar la terminal archlinux
+    escritorio
+    intalar tilix = emulador de terminal
+    sudo oacman -S tilix
+    abimos tilix   
+    sudo pacman -S zsh
+    chsh -s$(which zsh)= cambiar shell
+    installar plugins
+    $ sh-c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+    
