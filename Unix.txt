@@ -130,8 +130,79 @@ Pipe operator
 Operadores de control
     ls; cal; date                       Con el ; se ejecutan comandos de forma sincronica
 
-    ls & cal & date                     Con el & se ejecutan los comandos de formadinconica abreiendo mas terminales     
+    ls & cal & date                     Con el & se ejecutan los comandos de formadinconica abriendo mas terminales     
 
     mkdir test && cd test               && actua como un condicional de comandos (si es correcta el primer comando pasa al siguiente)
 
     mkdir test || cd test               || actua como un condicional Or
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+https://www.hostinger.co/tutoriales/cambiar-permisos-y-propietarios-linux-linea-de-comandos/
+
+Modificador de permisos en la terminal
+    chmod 755 NombreArchivo             cambia los permisos del owner, group, others 
+
+    whoami                              Muestra el usuario
+
+    su NombreUsuario                    cambia de usuarios
+
+    sudo rm NombreArchivo               Permite borrar archivos sin necesidad de estar en el root
+
+    passwd                              Permite cambiar la contraseña del usuario logueado
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Variables de entorno
+    ln -s ruta NombreLink                   Crea links simbolicos
+
+    printenv                                Muestra todas  las variables de entorno
+
+    echo $NombreVariable                    Muestra la variable
+
+Para modificar el bash buscamos el archivo .bashrc olo abrimos con code .bashrc  
+    se pueden crear alias colocando:
+    alias NombreAlias='lista de comandos'
+Para cambiar el Path
+    PATH=$PATH:/path que deseas insertar
+
+    despues siempre toca derle bash en la terminal 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Comandos de Busqueda
+    which code                                  Busca en todas las rutas del path binarios
+
+    find rutaParaBusqueda -name                 Busca archivos
+    find rutaParaBusqueda -type f o d -name     Busca archivos(fils) o documentos (documents)
+    find rutaParaBusqueda -size 20M             Busca los archivos por tamaño mayores a 20M
+
+    grep palabra NombreArchivo                  Busca todas las palabras que sean iguales en un archivo
+    grep palabra -i NombreArchivo               Busca todas las palabras que sean iguales en un archivo y que no sean mayusculas
+    grep palabra -c NombreArchivo               Cuantas veces aparece la palabra en el archivo
+    grep palabra -v NombreArchivo               Busca todsa las palabras que sean diferentes en un archivo 
+
+    wc NombreArchivo                            Cuenta el numero de lineas, caracteres, numero de bits tiene un archivo
+    wc -l NombreArchivo                         Cuenta el numero de lineas tiene un archivo  
+    wc -w NombreArchivo                         Cuenta el numero de caracteres tiene un archivo
+    wc -c NombreArchivo                         Cuenta el numero de numero de bits tiene un archivo
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Utilidades de red
+    ifconfig                                    Muestra informacion de red
+
+    ping Direccion de pagina                    Cantidad de paquetes que tiene una pagina
+
+    curl Direccion de pagina                    Trae un archivo de texto atraves de la red
+    
+    wget Direccion de pagina                    descarga un archivo de texto atraves de la red
+
+    traceroute Direccion de pagina              muestra todas las ip que inervienen en el camino de la direccion que estamos buscando    
+
+    netstat -i                                  Muestra los dispositivos de red 
+
+ //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ Comprimiendo archivos
+       
